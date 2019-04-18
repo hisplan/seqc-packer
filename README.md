@@ -7,8 +7,8 @@ Increment `image_version`.
 ```
 {
     "variables": {
-        "image_version": "0.0.3",
-        "seqc_version": "0.2.3-alpha.1",
+        "image_version": "0.0.4",
+        "seqc_version": "0.2.3-alpha.2",
         "maintainer": "chunj@mskcc.org"
     },
     ...

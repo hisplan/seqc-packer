@@ -1,6 +1,7 @@
 #!/bin/bash -e
 
-SEQC_VERSION="0.2.3-alpha.1"
+# github tag version to pull
+SEQC_VERSION="0.2.3-alpha.2"
 
 # install dependencies
 sudo yum install -y cairo pango
