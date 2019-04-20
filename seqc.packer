@@ -1,7 +1,7 @@
 {
     "variables": {
-        "image_version": "0.0.4",
-        "seqc_version": "0.2.3-alpha.3",
+        "image_version": "a3",
+        "seqc_version": "0.2.3-alpha.4",
         "maintainer": "chunj@mskcc.org"
     },
     "builders": [
@@ -11,14 +11,14 @@
             "source_ami": "ami-0de53d8956e8dcf80",
             "instance_type": "t2.micro",
             "ssh_username": "ec2-user",
-            "ami_name": "seqc-v{{user `seqc_version`}}-image-v{{user `image_version`}}",
-            "ami_description": "SEQC v{{user `seqc_version`}} Image v{{user `image_version`}}",
+            "ami_name": "seqc-v{{user `seqc_version`}}_{{user `image_version`}}",
+            "ami_description": "SEQC v{{user `seqc_version`}}_{{user `image_version`}}",
             "tags": {
-                "Name": "seqc-v{{user `seqc_version`}}-image-v{{user `image_version`}}",
+                "Name": "seqc-v{{user `seqc_version`}}_{{user `image_version`}}",
                 "Owner": "chunj"
             },
             "run_tags": {
-                "Name": "seqc-v{{user `seqc_version`}}-image-v{{user `image_version`}}",
+                "Name": "seqc-v{{user `seqc_version`}}_{{user `image_version`}}",
                 "Owner": "chunj"
             },
             "launch_block_device_mappings": [
