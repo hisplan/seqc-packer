@@ -1,10 +1,11 @@
 #!/bin/bash -e
 
 # github tag version to pull
-SEQC_VERSION="0.2.3-alpha.3"
+SEQC_VERSION="0.2.3-alpha.4"
 
 # install dependencies
 sudo yum install -y cairo pango
+sudo yum install -y mutt
 
 cd /tmp
 
@@ -19,3 +20,10 @@ rm -rf v${SEQC_VERSION}.tar.gz
 cd seqc-${SEQC_VERSION}
 
 sudo pip3 install .
+
+# falling back to Dejavu Sans seems to work only after this workaround implemented:
+# /opt/conda/lib/python3.6/site-packages/matplotlib/font_manager.py:1241: UserWarning: findfont: Font family ['sans-serif'] not found. Falling back to DejaVu Sans.
+# (prop.get_family(), self.defaultFamily[fontext]))
+site_package=`python -c "import site; print(site.getsitepackages()[0])"`
+sudo cp ${site_package}/matplotlib/mpl-data/fonts/ttf/DejaVuS* /usr/share/fonts/
+fc-cache -fv
