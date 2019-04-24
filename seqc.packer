@@ -1,7 +1,7 @@
 {
     "variables": {
-        "image_version": "a3",
-        "seqc_version": "0.2.3-alpha.4",
+        "image_version": "a1",
+        "seqc_version": "0.2.3-alpha.5",
         "maintainer": "chunj@mskcc.org"
     },
     "builders": [
