@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 # github tag version to pull
-SEQC_VERSION="0.2.3-alpha.5"
+SEQC_VERSION="0.2.4"
 
 # install dependencies
 sudo yum install -y cairo pango
@@ -13,7 +13,7 @@ sudo pip3 install Cython
 sudo pip3 install numpy
 sudo pip3 install bhtsne
 
-curl -OL https://github.com/hisplan/seqc/archive/v${SEQC_VERSION}.tar.gz
+curl -OL https://github.com/dpeerlab/seqc/archive/v${SEQC_VERSION}.tar.gz
 tar xvzf v${SEQC_VERSION}.tar.gz
 rm -rf v${SEQC_VERSION}.tar.gz
 
