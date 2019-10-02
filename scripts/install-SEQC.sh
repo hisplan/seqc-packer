@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 # github tag version to pull
-SEQC_VERSION="0.2.4"
+SEQC_VERSION="0.2.5"
 
 # install dependencies
 sudo yum install -y cairo pango
