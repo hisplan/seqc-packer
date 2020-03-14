@@ -1,24 +1,44 @@
 # packer-seqc
 
-## How to Build
+This package automates the creation of SEQC AMI (Amazon Machine Image). The AMI will contain SEQC, Docker, Miniconda, STAR, and samtools.
 
-Increment `image_version`.
+## Prerequisites
+
+- AWS CLI 1.10.47+ (https://aws.amazon.com/cli/)
+- Packer 1.5.4+ (https://packer.io/downloads.html)
+- Python 3+
+
+## Building SEQC AMI
+
+To create a SEQC AMI in the `us-east-1` region:
+
+```bash
+$ ./make-ami.sh -r us-east-1
+```
+
+To create a SEQC AMI in the `eu-west-1` region:
+
+```bash
+$ ./make-ami.sh -r eu-west-1
+```
+
+## Incrementing Image Version
+
+Increment `image_version` in the `seqc.packer` file:
 
 ```json
 {
     "variables": {
-        "image_version": "a2",
+        "image_version": "a3",
         "seqc_version": "0.2.5",
         "maintainer": "chunj@mskcc.org"
     },
     ...
 ```
 
-```bash
-$ ./make-ami.sh
-```
-
 ## Enlisting as Official AMI
+
+(*) _This is only for SCRI (Single-Cell Research Inititive)_
 
 After the SEQC AMI has been successfully created, you can add a special signature to the SEQC AMI (as a tag). This will allow you to see the list of all the official AMIs by running `show-ami-list.sh`.
 
