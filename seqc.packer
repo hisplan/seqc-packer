@@ -1,18 +1,21 @@
 {
     "variables": {
-        "image_version": "a2",
+        "image_version": "a3",
         "seqc_version": "0.2.5",
-        "maintainer": "chunj@mskcc.org"
+        "maintainer": "chunj@mskcc.org",
+        "region": "us-east-1",
+        "source_ami": "ami-0de53d8956e8dcf80"
     },
     "builders": [
         {
             "type": "amazon-ebs",
-            "region": "us-east-1",
-            "source_ami": "ami-0de53d8956e8dcf80",
+            "region": "{{user `region`}}",
+            "source_ami": "{{user `source_ami`}}",
             "instance_type": "t2.micro",
             "ssh_username": "ec2-user",
             "ami_name": "seqc-v{{user `seqc_version`}}_{{user `image_version`}}",
             "ami_description": "SEQC v{{user `seqc_version`}}_{{user `image_version`}}",
+            "ami_regions": "{{user `region`}}",
             "tags": {
                 "Name": "seqc-v{{user `seqc_version`}}_{{user `image_version`}}",
                 "Owner": "chunj"
