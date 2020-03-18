@@ -1,5 +1,23 @@
 #!/bin/bash -e
 
+if [ ! -x "$(command -v packer)" ]
+then
+    echo "Packer not found!"
+    exit 1
+fi
+
+if [ ! -x "$(command -v aws)" ]
+then
+    echo "AWS CLI not found!"
+    exit 1
+fi
+
+if [ ! -x "$(command -v python)" ]
+then
+    echo "Python not found!"
+    exit 1
+fi
+
 usage()
 {
 cat << EOF
@@ -50,7 +68,7 @@ then
 fi
 
 # get ami metadata
-image_meta=`aws ec2 describe-images --image-ids ${ami_id} --region ${ami_region}`
+image_meta=`aws ec2 describe-images --image-ids ${ami_id} --region ${ami_region} --output json`
 
 # get ebs snapshot id
 ebs_snapshot_id=`echo ${image_meta} | python -c "import json; import sys; data=json.load(sys.stdin); print(data['Images'][0]['BlockDeviceMappings'][0]['Ebs']['SnapshotId'])"`
