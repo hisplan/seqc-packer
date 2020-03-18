@@ -8,6 +8,19 @@ This package automates the creation of SEQC AMI (Amazon Machine Image). The AMI 
 - Packer 1.5.4+ (https://packer.io/downloads.html)
 - Python 3+
 
+Make sure that you can run the following commands from your bash terminal:
+
+```
+$ aws --version
+aws-cli/1.16.217 Python/3.7.3 Darwin/18.7.0 botocore/1.12.249
+
+$ packer --version
+1.4.1
+
+$ python --version
+Python 3.7.3
+```
+
 ## Building SEQC AMI
 
 To create a SEQC AMI in the `us-east-1` region:
