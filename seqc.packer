@@ -1,7 +1,7 @@
 {
     "variables": {
         "image_version": "a1",
-        "seqc_version": "0.2.6-alpha.3",
+        "seqc_version": "0.2.6-beta.2",
         "maintainer": "chunj@mskcc.org",
         "region": "us-east-1",
         "source_ami": "ami-0de53d8956e8dcf80"
@@ -11,7 +11,7 @@
             "type": "amazon-ebs",
             "region": "{{user `region`}}",
             "source_ami": "{{user `source_ami`}}",
-            "instance_type": "t2.micro",
+            "instance_type": "t2.medium",
             "ssh_username": "ec2-user",
             "ami_name": "seqc-v{{user `seqc_version`}}_{{user `image_version`}}",
             "ami_description": "SEQC v{{user `seqc_version`}}_{{user `image_version`}}",
@@ -43,7 +43,8 @@
                 "./scripts/install-samtools.sh",
                 "./scripts/install-docker.sh",
                 "./scripts/install-STAR.sh",
-                "./scripts/install-SEQC.sh"
+                "./scripts/install-SEQC.sh",
+                "./scripts/install-utils.sh"
             ]
         }
     ]
