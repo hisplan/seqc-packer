@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-# this version comes with Python 3.7.6
+# this version comes with Python 3.7.7
 # https://repo.anaconda.com/miniconda/
 # https://repo.anaconda.com/miniconda/Miniconda3-py37_4.8.2-Linux-x86_64.sh
 miniconda_version="4.8.3"
