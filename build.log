@@ -1,12 +1,583 @@
-1595123472,,ui,say,==> amazon-ebs: Prevalidating any provided VPC information
-1595123472,,ui,say,==> amazon-ebs: Prevalidating AMI Name: seqc-v0.2.6-beta.5_a1
-1595123473,,ui,message,    amazon-ebs: Found Image ID: ami-0de53d8956e8dcf80
-1595123473,,ui,say,==> amazon-ebs: Creating temporary keypair: packer_5f13a710-252a-7117-1c1d-bee5b62e431e
-1595123474,,ui,say,==> amazon-ebs: Creating temporary security group for this instance: packer_5f13a712-9161-24e9-2016-53a5c02fbb48
-1595123474,,ui,say,==> amazon-ebs: Authorizing access to port 22 from [0.0.0.0/0] in the temporary security groups...
-1595123474,,ui,say,==> amazon-ebs: Launching a source AWS instance...
-1595123474,,ui,say,==> amazon-ebs: Adding tags to source instance
-1595123474,,ui,message,    amazon-ebs: Adding tag: "Name": "seqc-v0.2.6-beta.5_a1"
-1595123474,,ui,message,    amazon-ebs: Adding tag: "Owner": "chunj"
-1595123476,,ui,message,    amazon-ebs: Instance ID: i-03ea3b357724d7ce9
-1595123476,,ui,say,==> amazon-ebs: Waiting for instance (i-03ea3b357724d7ce9) to become ready...
+1595288532,,ui,say,==> amazon-ebs: Prevalidating any provided VPC information
+1595288532,,ui,say,==> amazon-ebs: Prevalidating AMI Name: seqc-v0.2.6-beta.6_a1
+1595288533,,ui,message,    amazon-ebs: Found Image ID: ami-0de53d8956e8dcf80
+1595288533,,ui,say,==> amazon-ebs: Creating temporary keypair: packer_5f162bd3-0b48-83d9-8db5-df0036ae986b
+1595288533,,ui,say,==> amazon-ebs: Creating temporary security group for this instance: packer_5f162bd5-facb-afb4-6aa5-3abded243f69
+1595288534,,ui,say,==> amazon-ebs: Authorizing access to port 22 from [0.0.0.0/0] in the temporary security groups...
+1595288534,,ui,say,==> amazon-ebs: Launching a source AWS instance...
+1595288534,,ui,say,==> amazon-ebs: Adding tags to source instance
+1595288534,,ui,message,    amazon-ebs: Adding tag: "Owner": "chunj"
+1595288534,,ui,message,    amazon-ebs: Adding tag: "Name": "seqc-v0.2.6-beta.6_a1"
+1595288536,,ui,message,    amazon-ebs: Instance ID: i-0c09d7504667fbc07
+1595288536,,ui,say,==> amazon-ebs: Waiting for instance (i-0c09d7504667fbc07) to become ready...
+1595288567,,ui,say,==> amazon-ebs: Using ssh communicator to connect: 3.231.220.45
+1595288567,,ui,say,==> amazon-ebs: Waiting for SSH to become available...
+1595288572,,ui,say,==> amazon-ebs: Connected to SSH!
+1595288572,,ui,say,==> amazon-ebs: Provisioning with shell script: ./scripts/bootstrap.sh
+1595288573,,ui,message,    amazon-ebs: Loaded plugins: extras_suggestions%!(PACKER_COMMA) langpacks%!(PACKER_COMMA) priorities%!(PACKER_COMMA) update-motd
+1595288573,,ui,error,==> amazon-ebs: Existing lock /var/run/yum.pid: another copy is running as pid 3389.
+1595288573,,ui,error,==> amazon-ebs: Another app is currently holding the yum lock; waiting for it to exit...
+1595288573,,ui,error,==> amazon-ebs:   The other application is: yum
+1595288573,,ui,error,==> amazon-ebs:     Memory :  95 M RSS (386 MB VSZ)
+1595288573,,ui,error,==> amazon-ebs:     Started: Mon Jul 20 23:42:49 2020 - 00:04 ago
+1595288573,,ui,error,==> amazon-ebs:     State  : Running%!(PACKER_COMMA) pid: 3389
+1595288575,,ui,error,==> amazon-ebs: Another app is currently holding the yum lock; waiting for it to exit...
+1595288575,,ui,error,==> amazon-ebs:   The other application is: yum
+1595288575,,ui,error,==> amazon-ebs:     Memory : 118 M RSS (409 MB VSZ)
+1595288575,,ui,error,==> amazon-ebs:     Started: Mon Jul 20 23:42:49 2020 - 00:06 ago
+1595288575,,ui,error,==> amazon-ebs:     State  : Running%!(PACKER_COMMA) pid: 3389
+1595288577,,ui,error,==> amazon-ebs: Existing lock /var/run/yum.pid: another copy is running as pid 3380.
+1595288577,,ui,error,==> amazon-ebs: Another app is currently holding the yum lock; waiting for it to exit...
+1595288577,,ui,error,==> amazon-ebs:   The other application is: yum
+1595288577,,ui,error,==> amazon-ebs:     Memory :  80 M RSS (297 MB VSZ)
+1595288577,,ui,error,==> amazon-ebs:     Started: Mon Jul 20 23:42:49 2020 - 00:08 ago
+1595288577,,ui,error,==> amazon-ebs:     State  : Running%!(PACKER_COMMA) pid: 3380
+1595288579,,ui,error,==> amazon-ebs: Another app is currently holding the yum lock; waiting for it to exit...
+1595288579,,ui,error,==> amazon-ebs:   The other application is: yum
+1595288579,,ui,error,==> amazon-ebs:     Memory :  86 M RSS (303 MB VSZ)
+1595288579,,ui,error,==> amazon-ebs:     Started: Mon Jul 20 23:42:49 2020 - 00:10 ago
+1595288579,,ui,error,==> amazon-ebs:     State  : Running%!(PACKER_COMMA) pid: 3380
+1595288581,,ui,error,==> amazon-ebs: Another app is currently holding the yum lock; waiting for it to exit...
+1595288581,,ui,error,==> amazon-ebs:   The other application is: yum
+1595288581,,ui,error,==> amazon-ebs:     Memory :  98 M RSS (333 MB VSZ)
+1595288581,,ui,error,==> amazon-ebs:     Started: Mon Jul 20 23:42:49 2020 - 00:12 ago
+1595288581,,ui,error,==> amazon-ebs:     State  : Sleeping%!(PACKER_COMMA) pid: 3380
+1595288583,,ui,error,==> amazon-ebs: Another app is currently holding the yum lock; waiting for it to exit...
+1595288583,,ui,error,==> amazon-ebs:   The other application is: yum
+1595288583,,ui,error,==> amazon-ebs:     Memory :  98 M RSS (333 MB VSZ)
+1595288583,,ui,error,==> amazon-ebs:     Started: Mon Jul 20 23:42:49 2020 - 00:14 ago
+1595288583,,ui,error,==> amazon-ebs:     State  : Uninterruptible%!(PACKER_COMMA) pid: 3380
+1595288585,,ui,error,==> amazon-ebs: Another app is currently holding the yum lock; waiting for it to exit...
+1595288585,,ui,error,==> amazon-ebs:   The other application is: yum
+1595288585,,ui,error,==> amazon-ebs:     Memory :  98 M RSS (333 MB VSZ)
+1595288585,,ui,error,==> amazon-ebs:     Started: Mon Jul 20 23:42:49 2020 - 00:16 ago
+1595288585,,ui,error,==> amazon-ebs:     State  : Running%!(PACKER_COMMA) pid: 3380
+1595288587,,ui,error,==> amazon-ebs: Another app is currently holding the yum lock; waiting for it to exit...
+1595288587,,ui,error,==> amazon-ebs:   The other application is: yum
+1595288587,,ui,error,==> amazon-ebs:     Memory :  98 M RSS (333 MB VSZ)
+1595288587,,ui,error,==> amazon-ebs:     Started: Mon Jul 20 23:42:49 2020 - 00:18 ago
+1595288587,,ui,error,==> amazon-ebs:     State  : Running%!(PACKER_COMMA) pid: 3380
+1595288589,,ui,error,==> amazon-ebs: Another app is currently holding the yum lock; waiting for it to exit...
+1595288589,,ui,error,==> amazon-ebs:   The other application is: yum
+1595288589,,ui,error,==> amazon-ebs:     Memory :  98 M RSS (333 MB VSZ)
+1595288589,,ui,error,==> amazon-ebs:     Started: Mon Jul 20 23:42:49 2020 - 00:20 ago
+1595288589,,ui,error,==> amazon-ebs:     State  : Uninterruptible%!(PACKER_COMMA) pid: 3380
+1595288591,,ui,message,    amazon-ebs: Resolving Dependencies
+1595288591,,ui,message,    amazon-ebs: --> Running transaction check
+1595288591,,ui,message,    amazon-ebs: ---> Package amazon-linux-extras.noarch 0:1.6.7-1.amzn2 will be updated
+1595288591,,ui,message,    amazon-ebs: ---> Package amazon-linux-extras.noarch 0:1.6.11-1.amzn2 will be an update
+1595288591,,ui,message,    amazon-ebs: ---> Package amazon-linux-extras-yum-plugin.noarch 0:1.6.7-1.amzn2 will be updated
+1595288591,,ui,message,    amazon-ebs: ---> Package amazon-linux-extras-yum-plugin.noarch 0:1.6.11-1.amzn2 will be an update
+1595288591,,ui,message,    amazon-ebs: ---> Package amazon-ssm-agent.x86_64 0:2.3.372.0-1.amzn2 will be updated
+1595288591,,ui,message,    amazon-ebs: ---> Package amazon-ssm-agent.x86_64 0:2.3.1319.0-1.amzn2 will be an update
+1595288591,,ui,message,    amazon-ebs: ---> Package at.x86_64 0:3.1.13-23.amzn2 will be updated
+1595288591,,ui,message,    amazon-ebs: ---> Package at.x86_64 0:3.1.13-24.amzn2 will be an update
+1595288591,,ui,message,    amazon-ebs: ---> Package aws-cfn-bootstrap.noarch 0:1.4-31.amzn2 will be updated
+1595288591,,ui,message,    amazon-ebs: ---> Package aws-cfn-bootstrap.noarch 0:1.4-32.amzn2.0.1 will be an update
+1595288591,,ui,message,    amazon-ebs: ---> Package awscli.noarch 0:1.16.102-1.amzn2.0.1 will be updated
+1595288591,,ui,message,    amazon-ebs: ---> Package awscli.noarch 0:1.16.300-1.amzn2.0.2 will be an update
+1595288591,,ui,message,    amazon-ebs: ---> Package bash.x86_64 0:4.2.46-30.amzn2 will be updated
+1595288591,,ui,message,    amazon-ebs: ---> Package bash.x86_64 0:4.2.46-33.amzn2 will be an update
+1595288591,,ui,message,    amazon-ebs: ---> Package binutils.x86_64 0:2.29.1-27.amzn2.0.1 will be updated
+1595288591,,ui,message,    amazon-ebs: ---> Package binutils.x86_64 0:2.29.1-30.amzn2 will be an update
+1595288591,,ui,message,    amazon-ebs: ---> Package blktrace.x86_64 0:1.0.5-8.amzn2.0.2 will be updated
+1595288591,,ui,message,    amazon-ebs: ---> Package blktrace.x86_64 0:1.0.5-9.amzn2 will be an update
+1595288591,,ui,message,    amazon-ebs: ---> Package ca-certificates.noarch 0:2018.2.22-70.0.amzn2 will be updated
+1595288591,,ui,message,    amazon-ebs: ---> Package ca-certificates.noarch 0:2019.2.32-76.amzn2.0.2 will be an update
+1595288591,,ui,message,    amazon-ebs: ---> Package chrony.x86_64 0:3.2-1.amzn2.0.4 will be updated
+1595288591,,ui,message,    amazon-ebs: ---> Package chrony.x86_64 0:3.2-1.amzn2.0.5 will be an update
+1595288591,,ui,message,    amazon-ebs: ---> Package cloud-init.noarch 0:18.2-72.amzn2.0.6 will be updated
+1595288591,,ui,message,    amazon-ebs: ---> Package cloud-init.noarch 0:19.3-3.amzn2 will be an update
+1595288591,,ui,message,    amazon-ebs: ---> Package cloud-utils-growpart.noarch 0:0.29-2.amzn2 will be updated
+1595288591,,ui,message,    amazon-ebs: ---> Package cloud-utils-growpart.noarch 0:0.31-2.amzn2 will be an update
+1595288591,,ui,message,    amazon-ebs: ---> Package coreutils.x86_64 0:8.22-21.amzn2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package coreutils.x86_64 0:8.22-24.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package cronie.x86_64 0:1.4.11-19.amzn2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package cronie.x86_64 0:1.4.11-23.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package cronie-anacron.x86_64 0:1.4.11-19.amzn2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package cronie-anacron.x86_64 0:1.4.11-23.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package curl.x86_64 0:7.61.1-9.amzn2.0.1 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package curl.x86_64 0:7.61.1-12.amzn2.0.2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package diffutils.x86_64 0:3.3-4.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package diffutils.x86_64 0:3.3-5.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package dosfstools.x86_64 0:3.0.20-9.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package dosfstools.x86_64 0:3.0.20-10.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package dracut.x86_64 0:033-535.amzn2.1.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package dracut.x86_64 0:033-535.amzn2.1.3 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package dracut-config-generic.x86_64 0:033-535.amzn2.1.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package dracut-config-generic.x86_64 0:033-535.amzn2.1.3 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package dyninst.x86_64 0:9.3.1-1.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package dyninst.x86_64 0:9.3.1-3.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package ec2-hibinit-agent.noarch 0:1.0.0-3.amzn2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package ec2-hibinit-agent.noarch 0:1.0.2-3.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package ec2-instance-connect.noarch 0:1.0-3.amzn2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package ec2-instance-connect.noarch 0:1.1-12.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package ec2-net-utils.noarch 0:1.1-1.1.amzn2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package ec2-net-utils.noarch 0:1.4-2.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package ec2-utils.noarch 0:0.5-1.amzn2.0.1 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package ec2-utils.noarch 0:1.2-1.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package elfutils-default-yama-scope.noarch 0:0.170-4.amzn2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package elfutils-default-yama-scope.noarch 0:0.176-2.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package elfutils-libelf.x86_64 0:0.170-4.amzn2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package elfutils-libelf.x86_64 0:0.176-2.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package elfutils-libs.x86_64 0:0.170-4.amzn2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package elfutils-libs.x86_64 0:0.176-2.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package ethtool.x86_64 2:4.8-7.amzn2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package ethtool.x86_64 2:4.8-10.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package file.x86_64 0:5.11-33.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package file.x86_64 0:5.11-36.amzn2.0.1 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package file-libs.x86_64 0:5.11-33.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package file-libs.x86_64 0:5.11-36.amzn2.0.1 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package findutils.x86_64 1:4.5.11-5.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package findutils.x86_64 1:4.5.11-6.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package freetype.x86_64 0:2.4.11-15.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package freetype.x86_64 0:2.8-14.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: --> Processing Dependency: libpng15.so.15(PNG15_0)(64bit) for package: freetype-2.8-14.amzn2.x86_64
+1595288592,,ui,message,    amazon-ebs: --> Processing Dependency: libpng15.so.15()(64bit) for package: freetype-2.8-14.amzn2.x86_64
+1595288592,,ui,message,    amazon-ebs: ---> Package gdisk.x86_64 0:0.8.6-5.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package gdisk.x86_64 0:0.8.10-3.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package glib2.x86_64 0:2.54.2-2.amzn2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package glib2.x86_64 0:2.56.1-5.amzn2.0.1 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package glibc.x86_64 0:2.26-32.amzn2.0.1 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package glibc.x86_64 0:2.26-35.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package glibc-all-langpacks.x86_64 0:2.26-32.amzn2.0.1 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package glibc-all-langpacks.x86_64 0:2.26-35.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package glibc-common.x86_64 0:2.26-32.amzn2.0.1 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package glibc-common.x86_64 0:2.26-35.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package glibc-locale-source.x86_64 0:2.26-32.amzn2.0.1 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package glibc-locale-source.x86_64 0:2.26-35.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package glibc-minimal-langpack.x86_64 0:2.26-32.amzn2.0.1 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package glibc-minimal-langpack.x86_64 0:2.26-35.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package gnupg2.x86_64 0:2.0.22-5.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package gnupg2.x86_64 0:2.0.22-5.amzn2.0.4 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package hwdata.x86_64 0:0.252-8.8.amzn2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package hwdata.x86_64 0:0.252-9.3.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package initscripts.x86_64 0:9.49.39-1.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package initscripts.x86_64 0:9.49.47-1.amzn2.0.1 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package iproute.x86_64 0:4.15.0-1.amzn2.0.3 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package iproute.x86_64 0:4.15.0-1.amzn2.0.4 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package iptables.x86_64 0:1.4.21-24.1.amzn2 will be updated
+1595288592,,ui,message,    amazon-ebs: --> Processing Dependency: libip4tc.so.0()(64bit) for package: iptables-1.8.2-16.amzn2.0.2.x86_64
+1595288592,,ui,message,    amazon-ebs: --> Processing Dependency: libip6tc.so.0()(64bit) for package: iptables-1.8.2-16.amzn2.0.2.x86_64
+1595288592,,ui,message,    amazon-ebs: ---> Package iptables.x86_64 0:1.8.2-16.amzn2.0.2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package irqbalance.x86_64 2:1.5.0-2.amzn2.0.1 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package irqbalance.x86_64 2:1.5.0-4.amzn2.0.1 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package kbd.x86_64 0:1.15.5-13.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package kbd.x86_64 0:1.15.5-15.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package kbd-legacy.noarch 0:1.15.5-13.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package kbd-legacy.noarch 0:1.15.5-15.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package kbd-misc.noarch 0:1.15.5-13.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package kbd-misc.noarch 0:1.15.5-15.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package kernel.x86_64 0:4.14.181-142.260.amzn2 will be installed
+1595288592,,ui,message,    amazon-ebs: --> Processing Dependency: microcode_ctl >= 2:2.1-47.amzn2.0.4 for package: kernel-4.14.181-142.260.amzn2.x86_64
+1595288592,,ui,message,    amazon-ebs: ---> Package kpartx.x86_64 0:0.4.9-119.amzn2.1 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package kpartx.x86_64 0:0.4.9-127.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package kpatch.noarch 0:0.4.0-3.amzn2 will be obsoleted
+1595288592,,ui,message,    amazon-ebs: ---> Package kpatch-runtime.noarch 0:0.8.0-2.amzn2 will be obsoleting
+1595288592,,ui,message,    amazon-ebs: ---> Package krb5-libs.x86_64 0:1.15.1-20.amzn2.0.1 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package krb5-libs.x86_64 0:1.15.1-37.amzn2.2.2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package langtable.noarch 0:0.0.31-3.amzn2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package langtable.noarch 0:0.0.31-4.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package langtable-data.noarch 0:0.0.31-3.amzn2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package langtable-data.noarch 0:0.0.31-4.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package langtable-python.noarch 0:0.0.31-3.amzn2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package langtable-python.noarch 0:0.0.31-4.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package libcap-ng.x86_64 0:0.7.5-4.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package libcap-ng.x86_64 0:0.7.5-4.amzn2.0.4 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package libcrypt.x86_64 0:2.26-32.amzn2.0.1 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package libcrypt.x86_64 0:2.26-35.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package libcurl.x86_64 0:7.61.1-9.amzn2.0.1 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package libcurl.x86_64 0:7.61.1-12.amzn2.0.2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package libdrm.x86_64 0:2.4.83-2.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package libdrm.x86_64 0:2.4.97-2.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package libevent.x86_64 0:2.0.21-4.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package libevent.x86_64 0:2.0.21-4.amzn2.0.3 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package libfastjson.x86_64 0:0.99.4-2.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package libfastjson.x86_64 0:0.99.4-3.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package libgcc.x86_64 0:7.3.1-5.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package libgcc.x86_64 0:7.3.1-9.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package libgomp.x86_64 0:7.3.1-5.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package libgomp.x86_64 0:7.3.1-9.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package libidn2.x86_64 0:2.0.4-1.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package libidn2.x86_64 0:2.3.0-1.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package libjpeg-turbo.x86_64 0:1.2.90-5.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package libjpeg-turbo.x86_64 0:1.2.90-6.amzn2.0.3 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package libseccomp.x86_64 0:2.3.1-3.amzn2.0.3 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package libseccomp.x86_64 0:2.4.1-1.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package libsss_idmap.x86_64 0:1.16.2-13.amzn2.0.1 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package libsss_idmap.x86_64 0:1.16.4-21.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package libsss_nss_idmap.x86_64 0:1.16.2-13.amzn2.0.1 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package libsss_nss_idmap.x86_64 0:1.16.4-21.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package libstdc++.x86_64 0:7.3.1-5.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package libstdc++.x86_64 0:7.3.1-9.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package libteam.x86_64 0:1.27-4.amzn2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package libteam.x86_64 0:1.27-9.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package libtiff.x86_64 0:4.0.3-27.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package libtiff.x86_64 0:4.0.3-32.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package libtirpc.x86_64 0:0.2.4-0.10.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package libtirpc.x86_64 0:0.2.4-0.16.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package libxml2.x86_64 0:2.9.1-6.amzn2.3.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package libxml2.x86_64 0:2.9.1-6.amzn2.3.3 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package libxml2-python.x86_64 0:2.9.1-6.amzn2.3.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package libxml2-python.x86_64 0:2.9.1-6.amzn2.3.3 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package lm_sensors-libs.x86_64 0:3.4.0-4.20160601gitf9185e5.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package lm_sensors-libs.x86_64 0:3.4.0-8.20160601gitf9185e5.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package lsof.x86_64 0:4.87-5.amzn2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package lsof.x86_64 0:4.87-6.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package make.x86_64 1:3.82-23.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package make.x86_64 1:3.82-24.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package man-db.x86_64 0:2.6.3-9.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package man-db.x86_64 0:2.6.3-9.amzn2.0.3 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package mariadb-libs.x86_64 1:5.5.60-1.amzn2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package mariadb-libs.x86_64 1:5.5.64-1.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package ncurses.x86_64 0:6.0-8.20170212.amzn2.1.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package ncurses.x86_64 0:6.0-8.20170212.amzn2.1.3 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package ncurses-base.noarch 0:6.0-8.20170212.amzn2.1.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package ncurses-base.noarch 0:6.0-8.20170212.amzn2.1.3 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package ncurses-libs.x86_64 0:6.0-8.20170212.amzn2.1.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package ncurses-libs.x86_64 0:6.0-8.20170212.amzn2.1.3 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package openssh.x86_64 0:7.4p1-16.amzn2.0.5 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package openssh.x86_64 0:7.4p1-21.amzn2.0.1 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package openssh-clients.x86_64 0:7.4p1-16.amzn2.0.5 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package openssh-clients.x86_64 0:7.4p1-21.amzn2.0.1 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package openssh-server.x86_64 0:7.4p1-16.amzn2.0.5 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package openssh-server.x86_64 0:7.4p1-21.amzn2.0.1 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package p11-kit.x86_64 0:0.23.5-3.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package p11-kit.x86_64 0:0.23.19-1.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package p11-kit-trust.x86_64 0:0.23.5-3.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package p11-kit-trust.x86_64 0:0.23.19-1.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package passwd.x86_64 0:0.79-4.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package passwd.x86_64 0:0.79-5.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package procps-ng.x86_64 0:3.3.10-17.amzn2.2.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package procps-ng.x86_64 0:3.3.10-26.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package python-requests.noarch 0:2.6.0-1.amzn2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package python-requests.noarch 0:2.6.0-7.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package python-urlgrabber.noarch 0:3.10-8.amzn2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package python-urlgrabber.noarch 0:3.10-9.amzn2.0.1 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package python-urllib3.noarch 0:1.24.1-1.amzn2.0.1 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package python-urllib3.noarch 0:1.25.7-1.amzn2.0.1 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package python2-botocore.noarch 0:1.12.92-2.amzn2.0.1 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package python2-botocore.noarch 0:1.13.36-2.amzn2.0.1 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package python2-rpm.x86_64 0:4.11.3-40.amzn2.0.4 will be obsoleting
+1595288592,,ui,message,    amazon-ebs: ---> Package rpm.x86_64 0:4.11.3-25.amzn2.0.3 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package rpm.x86_64 0:4.11.3-40.amzn2.0.4 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package rpm-build-libs.x86_64 0:4.11.3-25.amzn2.0.3 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package rpm-build-libs.x86_64 0:4.11.3-40.amzn2.0.4 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package rpm-libs.x86_64 0:4.11.3-25.amzn2.0.3 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package rpm-libs.x86_64 0:4.11.3-40.amzn2.0.4 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package rpm-plugin-systemd-inhibit.x86_64 0:4.11.3-25.amzn2.0.3 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package rpm-plugin-systemd-inhibit.x86_64 0:4.11.3-40.amzn2.0.4 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package rpm-python.x86_64 0:4.11.3-25.amzn2.0.3 will be obsoleted
+1595288592,,ui,message,    amazon-ebs: ---> Package rsyslog.x86_64 0:8.24.0-16.amzn2.6.1 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package rsyslog.x86_64 0:8.24.0-52.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package selinux-policy.noarch 0:3.13.1-192.amzn2.6 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package selinux-policy.noarch 0:3.13.1-192.amzn2.6.3 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package selinux-policy-targeted.noarch 0:3.13.1-192.amzn2.6 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package selinux-policy-targeted.noarch 0:3.13.1-192.amzn2.6.3 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package setup.noarch 0:2.8.71-10.amzn2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package setup.noarch 0:2.8.71-10.amzn2.0.1 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package sssd-client.x86_64 0:1.16.2-13.amzn2.0.1 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package sssd-client.x86_64 0:1.16.4-21.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package strace.x86_64 0:4.22-1.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package strace.x86_64 0:4.26-1.amzn2.0.1 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package sysstat.x86_64 0:10.1.5-13.amzn2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package sysstat.x86_64 0:10.1.5-18.amzn2.0.1 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package system-release.x86_64 1:2-7.amzn2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package system-release.x86_64 1:2-12.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package systemd.x86_64 0:219-57.amzn2.0.9 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package systemd.x86_64 0:219-57.amzn2.0.12 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package systemd-libs.x86_64 0:219-57.amzn2.0.9 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package systemd-libs.x86_64 0:219-57.amzn2.0.12 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package systemd-sysv.x86_64 0:219-57.amzn2.0.9 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package systemd-sysv.x86_64 0:219-57.amzn2.0.12 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package systemtap-runtime.x86_64 0:3.2-4.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package systemtap-runtime.x86_64 0:4.2-1.amzn2.0.1 will be an update
+1595288592,,ui,message,    amazon-ebs: --> Processing Dependency: libjson-c.so.2()(64bit) for package: systemtap-runtime-4.2-1.amzn2.0.1.x86_64
+1595288592,,ui,message,    amazon-ebs: ---> Package tar.x86_64 2:1.26-34.amzn2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package tar.x86_64 2:1.26-35.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package tcpdump.x86_64 14:4.9.2-3.amzn2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package tcpdump.x86_64 14:4.9.2-4.amzn2.1 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package teamd.x86_64 0:1.27-4.amzn2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package teamd.x86_64 0:1.27-9.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package tzdata.noarch 0:2018i-1.amzn2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package tzdata.noarch 0:2019c-1.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package unzip.x86_64 0:6.0-19.amzn2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package unzip.x86_64 0:6.0-20.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package xfsdump.x86_64 0:3.1.6-2.amzn2.0.1 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package xfsdump.x86_64 0:3.1.8-6.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package yum.noarch 0:3.4.3-158.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package yum.noarch 0:3.4.3-158.amzn2.0.4 will be an update
+1595288592,,ui,message,    amazon-ebs: ---> Package zlib.x86_64 0:1.2.7-17.amzn2.0.2 will be updated
+1595288592,,ui,message,    amazon-ebs: ---> Package zlib.x86_64 0:1.2.7-18.amzn2 will be an update
+1595288592,,ui,message,    amazon-ebs: --> Running transaction check
+1595288592,,ui,message,    amazon-ebs: ---> Package iptables-libs.x86_64 0:1.8.2-16.amzn2.0.2 will be installed
+1595288592,,ui,message,    amazon-ebs: ---> Package json-c.x86_64 0:0.11-4.amzn2.0.4 will be installed
+1595288592,,ui,message,    amazon-ebs: ---> Package libpng.x86_64 2:1.5.13-7.amzn2.0.2 will be installed
+1595288592,,ui,message,    amazon-ebs: ---> Package microcode_ctl.x86_64 2:2.1-47.amzn2.0.7 will be installed
+1595288592,,ui,message,    amazon-ebs: --> Finished Dependency Resolution
+1595288593,,ui,message,    amazon-ebs:
+1595288593,,ui,message,    amazon-ebs: Dependencies Resolved
+1595288593,,ui,message,    amazon-ebs:
+1595288593,,ui,message,    amazon-ebs: ================================================================================
+1595288593,,ui,message,    amazon-ebs:  Package                      Arch   Version                   Repository  Size
+1595288593,,ui,message,    amazon-ebs: ================================================================================
+1595288593,,ui,message,    amazon-ebs: Installing:
+1595288593,,ui,message,    amazon-ebs:  kernel                       x86_64 4.14.181-142.260.amzn2    amzn2-core  21 M
+1595288593,,ui,message,    amazon-ebs:  kpatch-runtime               noarch 0.8.0-2.amzn2             amzn2-core  26 k
+1595288593,,ui,message,    amazon-ebs:      replacing  kpatch.noarch 0.4.0-3.amzn2
+1595288593,,ui,message,    amazon-ebs:  python2-rpm                  x86_64 4.11.3-40.amzn2.0.4       amzn2-core  84 k
+1595288593,,ui,message,    amazon-ebs:      replacing  rpm-python.x86_64 4.11.3-25.amzn2.0.3
+1595288593,,ui,message,    amazon-ebs: Updating:
+1595288593,,ui,message,    amazon-ebs:  amazon-linux-extras          noarch 1.6.11-1.amzn2            amzn2-core  36 k
+1595288593,,ui,message,    amazon-ebs:  amazon-linux-extras-yum-plugin
+1595288593,,ui,message,    amazon-ebs:                               noarch 1.6.11-1.amzn2            amzn2-core  10 k
+1595288593,,ui,message,    amazon-ebs:  amazon-ssm-agent             x86_64 2.3.1319.0-1.amzn2        amzn2-core  21 M
+1595288593,,ui,message,    amazon-ebs:  at                           x86_64 3.1.13-24.amzn2           amzn2-core  51 k
+1595288593,,ui,message,    amazon-ebs:  aws-cfn-bootstrap            noarch 1.4-32.amzn2.0.1          amzn2-core 652 k
+1595288593,,ui,message,    amazon-ebs:  awscli                       noarch 1.16.300-1.amzn2.0.2      amzn2-core 1.6 M
+1595288593,,ui,message,    amazon-ebs:  bash                         x86_64 4.2.46-33.amzn2           amzn2-core 1.0 M
+1595288593,,ui,message,    amazon-ebs:  binutils                     x86_64 2.29.1-30.amzn2           amzn2-core 5.8 M
+1595288593,,ui,message,    amazon-ebs:  blktrace                     x86_64 1.0.5-9.amzn2             amzn2-core 134 k
+1595288593,,ui,message,    amazon-ebs:  ca-certificates              noarch 2019.2.32-76.amzn2.0.2    amzn2-core 397 k
+1595288593,,ui,message,    amazon-ebs:  chrony                       x86_64 3.2-1.amzn2.0.5           amzn2-core 249 k
+1595288593,,ui,message,    amazon-ebs:  cloud-init                   noarch 19.3-3.amzn2              amzn2-core 923 k
+1595288593,,ui,message,    amazon-ebs:  cloud-utils-growpart         noarch 0.31-2.amzn2              amzn2-core  27 k
+1595288593,,ui,message,    amazon-ebs:  coreutils                    x86_64 8.22-24.amzn2             amzn2-core 3.2 M
+1595288593,,ui,message,    amazon-ebs:  cronie                       x86_64 1.4.11-23.amzn2           amzn2-core  92 k
+1595288593,,ui,message,    amazon-ebs:  cronie-anacron               x86_64 1.4.11-23.amzn2           amzn2-core  36 k
+1595288593,,ui,message,    amazon-ebs:  curl                         x86_64 7.61.1-12.amzn2.0.2       amzn2-core 342 k
+1595288593,,ui,message,    amazon-ebs:  diffutils                    x86_64 3.3-5.amzn2               amzn2-core 321 k
+1595288593,,ui,message,    amazon-ebs:  dosfstools                   x86_64 3.0.20-10.amzn2           amzn2-core 101 k
+1595288593,,ui,message,    amazon-ebs:  dracut                       x86_64 033-535.amzn2.1.3         amzn2-core 325 k
+1595288593,,ui,message,    amazon-ebs:  dracut-config-generic        x86_64 033-535.amzn2.1.3         amzn2-core  57 k
+1595288593,,ui,message,    amazon-ebs:  dyninst                      x86_64 9.3.1-3.amzn2             amzn2-core 3.5 M
+1595288593,,ui,message,    amazon-ebs:  ec2-hibinit-agent            noarch 1.0.2-3.amzn2             amzn2-core  14 k
+1595288593,,ui,message,    amazon-ebs:  ec2-instance-connect         noarch 1.1-12.amzn2              amzn2-core  22 k
+1595288593,,ui,message,    amazon-ebs:  ec2-net-utils                noarch 1.4-2.amzn2               amzn2-core  16 k
+1595288593,,ui,message,    amazon-ebs:  ec2-utils                    noarch 1.2-1.amzn2               amzn2-core  10 k
+1595288593,,ui,message,    amazon-ebs:  elfutils-default-yama-scope  noarch 0.176-2.amzn2             amzn2-core  33 k
+1595288593,,ui,message,    amazon-ebs:  elfutils-libelf              x86_64 0.176-2.amzn2             amzn2-core 195 k
+1595288593,,ui,message,    amazon-ebs:  elfutils-libs                x86_64 0.176-2.amzn2             amzn2-core 293 k
+1595288593,,ui,message,    amazon-ebs:  ethtool                      x86_64 2:4.8-10.amzn2            amzn2-core 127 k
+1595288593,,ui,message,    amazon-ebs:  file                         x86_64 5.11-36.amzn2.0.1         amzn2-core  57 k
+1595288593,,ui,message,    amazon-ebs:  file-libs                    x86_64 5.11-36.amzn2.0.1         amzn2-core 339 k
+1595288593,,ui,message,    amazon-ebs:  findutils                    x86_64 1:4.5.11-6.amzn2          amzn2-core 557 k
+1595288593,,ui,message,    amazon-ebs:  freetype                     x86_64 2.8-14.amzn2              amzn2-core 373 k
+1595288593,,ui,message,    amazon-ebs:  gdisk                        x86_64 0.8.10-3.amzn2            amzn2-core 187 k
+1595288593,,ui,message,    amazon-ebs:  glib2                        x86_64 2.56.1-5.amzn2.0.1        amzn2-core 2.4 M
+1595288593,,ui,message,    amazon-ebs:  glibc                        x86_64 2.26-35.amzn2             amzn2-core 3.3 M
+1595288593,,ui,message,    amazon-ebs:  glibc-all-langpacks          x86_64 2.26-35.amzn2             amzn2-core 7.0 M
+1595288593,,ui,message,    amazon-ebs:  glibc-common                 x86_64 2.26-35.amzn2             amzn2-core 768 k
+1595288593,,ui,message,    amazon-ebs:  glibc-locale-source          x86_64 2.26-35.amzn2             amzn2-core 3.2 M
+1595288593,,ui,message,    amazon-ebs:  glibc-minimal-langpack       x86_64 2.26-35.amzn2             amzn2-core  27 k
+1595288593,,ui,message,    amazon-ebs:  gnupg2                       x86_64 2.0.22-5.amzn2.0.4        amzn2-core 1.5 M
+1595288593,,ui,message,    amazon-ebs:  hwdata                       x86_64 0.252-9.3.amzn2           amzn2-core 2.4 M
+1595288593,,ui,message,    amazon-ebs:  initscripts                  x86_64 9.49.47-1.amzn2.0.1       amzn2-core 440 k
+1595288593,,ui,message,    amazon-ebs:  iproute                      x86_64 4.15.0-1.amzn2.0.4        amzn2-core 510 k
+1595288593,,ui,message,    amazon-ebs:  iptables                     x86_64 1.8.2-16.amzn2.0.2        amzn2-core 472 k
+1595288593,,ui,message,    amazon-ebs:  irqbalance                   x86_64 2:1.5.0-4.amzn2.0.1       amzn2-core  50 k
+1595288593,,ui,message,    amazon-ebs:  kbd                          x86_64 1.15.5-15.amzn2           amzn2-core 347 k
+1595288593,,ui,message,    amazon-ebs:  kbd-legacy                   noarch 1.15.5-15.amzn2           amzn2-core 466 k
+1595288593,,ui,message,    amazon-ebs:  kbd-misc                     noarch 1.15.5-15.amzn2           amzn2-core 1.4 M
+1595288593,,ui,message,    amazon-ebs:  kpartx                       x86_64 0.4.9-127.amzn2           amzn2-core  78 k
+1595288593,,ui,message,    amazon-ebs:  krb5-libs                    x86_64 1.15.1-37.amzn2.2.2       amzn2-core 798 k
+1595288593,,ui,message,    amazon-ebs:  langtable                    noarch 0.0.31-4.amzn2            amzn2-core  32 k
+1595288593,,ui,message,    amazon-ebs:  langtable-data               noarch 0.0.31-4.amzn2            amzn2-core 620 k
+1595288593,,ui,message,    amazon-ebs:  langtable-python             noarch 0.0.31-4.amzn2            amzn2-core  28 k
+1595288593,,ui,message,    amazon-ebs:  libcap-ng                    x86_64 0.7.5-4.amzn2.0.4         amzn2-core  25 k
+1595288593,,ui,message,    amazon-ebs:  libcrypt                     x86_64 2.26-35.amzn2             amzn2-core  47 k
+1595288593,,ui,message,    amazon-ebs:  libcurl                      x86_64 7.61.1-12.amzn2.0.2       amzn2-core 286 k
+1595288593,,ui,message,    amazon-ebs:  libdrm                       x86_64 2.4.97-2.amzn2            amzn2-core 150 k
+1595288593,,ui,message,    amazon-ebs:  libevent                     x86_64 2.0.21-4.amzn2.0.3        amzn2-core 214 k
+1595288593,,ui,message,    amazon-ebs:  libfastjson                  x86_64 0.99.4-3.amzn2            amzn2-core  27 k
+1595288593,,ui,message,    amazon-ebs:  libgcc                       x86_64 7.3.1-9.amzn2             amzn2-core  97 k
+1595288593,,ui,message,    amazon-ebs:  libgomp                      x86_64 7.3.1-9.amzn2             amzn2-core 203 k
+1595288593,,ui,message,    amazon-ebs:  libidn2                      x86_64 2.3.0-1.amzn2             amzn2-core 140 k
+1595288593,,ui,message,    amazon-ebs:  libjpeg-turbo                x86_64 1.2.90-6.amzn2.0.3        amzn2-core 132 k
+1595288593,,ui,message,    amazon-ebs:  libseccomp                   x86_64 2.4.1-1.amzn2             amzn2-core  59 k
+1595288593,,ui,message,    amazon-ebs:  libsss_idmap                 x86_64 1.16.4-21.amzn2           amzn2-core 151 k
+1595288593,,ui,message,    amazon-ebs:  libsss_nss_idmap             x86_64 1.16.4-21.amzn2           amzn2-core 157 k
+1595288593,,ui,message,    amazon-ebs:  libstdc++                    x86_64 7.3.1-9.amzn2             amzn2-core 444 k
+1595288593,,ui,message,    amazon-ebs:  libteam                      x86_64 1.27-9.amzn2              amzn2-core  49 k
+1595288593,,ui,message,    amazon-ebs:  libtiff                      x86_64 4.0.3-32.amzn2            amzn2-core 175 k
+1595288593,,ui,message,    amazon-ebs:  libtirpc                     x86_64 0.2.4-0.16.amzn2          amzn2-core  88 k
+1595288593,,ui,message,    amazon-ebs:  libxml2                      x86_64 2.9.1-6.amzn2.3.3         amzn2-core 660 k
+1595288593,,ui,message,    amazon-ebs:  libxml2-python               x86_64 2.9.1-6.amzn2.3.3         amzn2-core 245 k
+1595288593,,ui,message,    amazon-ebs:  lm_sensors-libs              x86_64 3.4.0-8.20160601gitf9185e5.amzn2
+1595288593,,ui,message,    amazon-ebs:                                                                amzn2-core  41 k
+1595288593,,ui,message,    amazon-ebs:  lsof                         x86_64 4.87-6.amzn2              amzn2-core 332 k
+1595288593,,ui,message,    amazon-ebs:  make                         x86_64 1:3.82-24.amzn2           amzn2-core 420 k
+1595288593,,ui,message,    amazon-ebs:  man-db                       x86_64 2.6.3-9.amzn2.0.3         amzn2-core 559 k
+1595288593,,ui,message,    amazon-ebs:  mariadb-libs                 x86_64 1:5.5.64-1.amzn2          amzn2-core 772 k
+1595288593,,ui,message,    amazon-ebs:  ncurses                      x86_64 6.0-8.20170212.amzn2.1.3  amzn2-core 351 k
+1595288593,,ui,message,    amazon-ebs:  ncurses-base                 noarch 6.0-8.20170212.amzn2.1.3  amzn2-core  75 k
+1595288593,,ui,message,    amazon-ebs:  ncurses-libs                 x86_64 6.0-8.20170212.amzn2.1.3  amzn2-core 306 k
+1595288593,,ui,message,    amazon-ebs:  openssh                      x86_64 7.4p1-21.amzn2.0.1        amzn2-core 507 k
+1595288593,,ui,message,    amazon-ebs:  openssh-clients              x86_64 7.4p1-21.amzn2.0.1        amzn2-core 650 k
+1595288593,,ui,message,    amazon-ebs:  openssh-server               x86_64 7.4p1-21.amzn2.0.1        amzn2-core 455 k
+1595288593,,ui,message,    amazon-ebs:  p11-kit                      x86_64 0.23.19-1.amzn2           amzn2-core 268 k
+1595288593,,ui,message,    amazon-ebs:  p11-kit-trust                x86_64 0.23.19-1.amzn2           amzn2-core 131 k
+1595288593,,ui,message,    amazon-ebs:  passwd                       x86_64 0.79-5.amzn2              amzn2-core 105 k
+1595288593,,ui,message,    amazon-ebs:  procps-ng                    x86_64 3.3.10-26.amzn2           amzn2-core 292 k
+1595288593,,ui,message,    amazon-ebs:  python-requests              noarch 2.6.0-7.amzn2             amzn2-core  95 k
+1595288593,,ui,message,    amazon-ebs:  python-urlgrabber            noarch 3.10-9.amzn2.0.1          amzn2-core 109 k
+1595288593,,ui,message,    amazon-ebs:  python-urllib3               noarch 1.25.7-1.amzn2.0.1        amzn2-core 189 k
+1595288593,,ui,message,    amazon-ebs:  python2-botocore             noarch 1.13.36-2.amzn2.0.1       amzn2-core 3.8 M
+1595288593,,ui,message,    amazon-ebs:  rpm                          x86_64 4.11.3-40.amzn2.0.4       amzn2-core 1.2 M
+1595288593,,ui,message,    amazon-ebs:  rpm-build-libs               x86_64 4.11.3-40.amzn2.0.4       amzn2-core 106 k
+1595288593,,ui,message,    amazon-ebs:  rpm-libs                     x86_64 4.11.3-40.amzn2.0.4       amzn2-core 275 k
+1595288593,,ui,message,    amazon-ebs:  rpm-plugin-systemd-inhibit   x86_64 4.11.3-40.amzn2.0.4       amzn2-core  47 k
+1595288593,,ui,message,    amazon-ebs:  rsyslog                      x86_64 8.24.0-52.amzn2           amzn2-core 617 k
+1595288593,,ui,message,    amazon-ebs:  selinux-policy               noarch 3.13.1-192.amzn2.6.3      amzn2-core 456 k
+1595288593,,ui,message,    amazon-ebs:  selinux-policy-targeted      noarch 3.13.1-192.amzn2.6.3      amzn2-core 6.6 M
+1595288593,,ui,message,    amazon-ebs:  setup                        noarch 2.8.71-10.amzn2.0.1       amzn2-core 167 k
+1595288593,,ui,message,    amazon-ebs:  sssd-client                  x86_64 1.16.4-21.amzn2           amzn2-core 207 k
+1595288593,,ui,message,    amazon-ebs:  strace                       x86_64 4.26-1.amzn2.0.1          amzn2-core 921 k
+1595288593,,ui,message,    amazon-ebs:  sysstat                      x86_64 10.1.5-18.amzn2.0.1       amzn2-core 317 k
+1595288593,,ui,message,    amazon-ebs:  system-release               x86_64 1:2-12.amzn2              amzn2-core  17 k
+1595288593,,ui,message,    amazon-ebs:  systemd                      x86_64 219-57.amzn2.0.12         amzn2-core 5.0 M
+1595288593,,ui,message,    amazon-ebs:  systemd-libs                 x86_64 219-57.amzn2.0.12         amzn2-core 391 k
+1595288593,,ui,message,    amazon-ebs:  systemd-sysv                 x86_64 219-57.amzn2.0.12         amzn2-core  80 k
+1595288593,,ui,message,    amazon-ebs:  systemtap-runtime            x86_64 4.2-1.amzn2.0.1           amzn2-core 472 k
+1595288593,,ui,message,    amazon-ebs:  tar                          x86_64 2:1.26-35.amzn2           amzn2-core 845 k
+1595288593,,ui,message,    amazon-ebs:  tcpdump                      x86_64 14:4.9.2-4.amzn2.1        amzn2-core 424 k
+1595288593,,ui,message,    amazon-ebs:  teamd                        x86_64 1.27-9.amzn2              amzn2-core 113 k
+1595288593,,ui,message,    amazon-ebs:  tzdata                       noarch 2019c-1.amzn2             amzn2-core 477 k
+1595288593,,ui,message,    amazon-ebs:  unzip                        x86_64 6.0-20.amzn2              amzn2-core 172 k
+1595288593,,ui,message,    amazon-ebs:  xfsdump                      x86_64 3.1.8-6.amzn2             amzn2-core 308 k
+1595288593,,ui,message,    amazon-ebs:  yum                          noarch 3.4.3-158.amzn2.0.4       amzn2-core 1.2 M
+1595288593,,ui,message,    amazon-ebs:  zlib                         x86_64 1.2.7-18.amzn2            amzn2-core  89 k
+1595288593,,ui,message,    amazon-ebs: Installing for dependencies:
+1595288593,,ui,message,    amazon-ebs:  iptables-libs                x86_64 1.8.2-16.amzn2.0.2        amzn2-core  91 k
+1595288593,,ui,message,    amazon-ebs:  json-c                       x86_64 0.11-4.amzn2.0.4          amzn2-core  30 k
+1595288593,,ui,message,    amazon-ebs:  libpng                       x86_64 2:1.5.13-7.amzn2.0.2      amzn2-core 214 k
+1595288593,,ui,message,    amazon-ebs:  microcode_ctl                x86_64 2:2.1-47.amzn2.0.7        amzn2-core 288 k
+1595288593,,ui,message,    amazon-ebs:
+1595288593,,ui,message,    amazon-ebs: Transaction Summary
+1595288593,,ui,message,    amazon-ebs: ================================================================================
+1595288593,,ui,message,    amazon-ebs: Install    3 Packages (+4 Dependent packages)
+1595288593,,ui,message,    amazon-ebs: Upgrade  117 Packages
+1595288593,,ui,message,    amazon-ebs:
+1595288593,,ui,message,    amazon-ebs: Total download size: 122 M
+1595288593,,ui,message,    amazon-ebs: Downloading packages:
+1595288593,,ui,message,    amazon-ebs: Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
+1595288594,,ui,message,    amazon-ebs: --------------------------------------------------------------------------------
+1595288594,,ui,message,    amazon-ebs: Total                                               65 MB/s | 122 MB  00:01
+1595288595,,ui,message,    amazon-ebs: Running transaction check
+1595288595,,ui,message,    amazon-ebs: Running transaction test
+1595288596,,ui,message,    amazon-ebs: Transaction test succeeded
+1595288596,,ui,message,    amazon-ebs: Running transaction
+1595288596,,ui,message,    amazon-ebs:   Updating   : langtable-0.0.31-4.amzn2.noarch                            1/243
+1595288596,,ui,message,    amazon-ebs:   Updating   : langtable-data-0.0.31-4.amzn2.noarch                       2/243
+1595288596,,ui,message,    amazon-ebs:   Updating   : python-urlgrabber-3.10-9.amzn2.0.1.noarch                  3/243
+1595288596,,ui,message,    amazon-ebs:   Updating   : kbd-legacy-1.15.5-15.amzn2.noarch                          4/243
+1595288596,,ui,message,    amazon-ebs:   Updating   : tzdata-2019c-1.amzn2.noarch                                5/243
+1595288596,,ui,message,    amazon-ebs:   Updating   : ncurses-base-6.0-8.20170212.amzn2.1.3.noarch               6/243
+1595288596,,ui,message,    amazon-ebs:   Updating   : bash-4.2.46-33.amzn2.x86_64                                7/243
+1595288597,,ui,message,    amazon-ebs:   Updating   : glibc-minimal-langpack-2.26-35.amzn2.x86_64                8/243
+1595288597,,ui,message,    amazon-ebs:   Updating   : glibc-common-2.26-35.amzn2.x86_64                          9/243
+1595288600,,ui,message,    amazon-ebs:   Updating   : glibc-2.26-35.amzn2.x86_64                                10/243
+1595288600,,ui,message,    amazon-ebs:   Updating   : ncurses-libs-6.0-8.20170212.amzn2.1.3.x86_64              11/243
+1595288600,,ui,message,    amazon-ebs:   Updating   : zlib-1.2.7-18.amzn2.x86_64                                12/243
+1595288601,,ui,message,    amazon-ebs:   Updating   : libgcc-7.3.1-9.amzn2.x86_64                               13/243
+1595288601,,ui,message,    amazon-ebs:   Updating   : elfutils-libelf-0.176-2.amzn2.x86_64                      14/243
+1595288601,,ui,message,    amazon-ebs:   Updating   : libstdc++-7.3.1-9.amzn2.x86_64                            15/243
+1595288601,,ui,message,    amazon-ebs:   Updating   : 1:system-release-2-12.amzn2.x86_64                        16/243
+1595288601,,ui,message,    amazon-ebs:   Updating   : libcrypt-2.26-35.amzn2.x86_64                             17/243
+1595288601,,ui,message,    amazon-ebs:   Updating   : openssh-7.4p1-21.amzn2.0.1.x86_64                         18/243
+1595288601,,ui,message,    amazon-ebs:   Updating   : iproute-4.15.0-1.amzn2.0.4.x86_64                         19/243
+1595288601,,ui,message,    amazon-ebs:   Updating   : glib2-2.56.1-5.amzn2.0.1.x86_64                           20/243
+1595288601,,ui,message,    amazon-ebs:   Updating   : file-libs-5.11-36.amzn2.0.1.x86_64                        21/243
+1595288601,,ui,message,    amazon-ebs:   Updating   : 1:findutils-4.5.11-6.amzn2.x86_64                         22/243
+1595288602,,ui,message,    amazon-ebs:   Updating   : p11-kit-0.23.19-1.amzn2.x86_64                            23/243
+1595288602,,ui,message,    amazon-ebs:   Updating   : diffutils-3.3-5.amzn2.x86_64                              24/243
+1595288602,,ui,message,    amazon-ebs:   Updating   : libcap-ng-0.7.5-4.amzn2.0.4.x86_64                        25/243
+1595288602,,ui,message,    amazon-ebs:   Updating   : p11-kit-trust-0.23.19-1.amzn2.x86_64                      26/243
+1595288602,,ui,message,    amazon-ebs:   Updating   : ca-certificates-2019.2.32-76.amzn2.0.2.noarch             27/243
+1595288603,,ui,message,    amazon-ebs:   Updating   : python-urllib3-1.25.7-1.amzn2.0.1.noarch                  28/243
+1595288603,,ui,message,    amazon-ebs:   Updating   : python2-botocore-1.13.36-2.amzn2.0.1.noarch               29/243
+1595288604,,ui,message,    amazon-ebs:   Updating   : python-requests-2.6.0-7.amzn2.noarch                      30/243
+1595288604,,ui,message,    amazon-ebs:   Updating   : dyninst-9.3.1-3.amzn2.x86_64                              31/243
+1595288604,,ui,message,    amazon-ebs:   Installing : 2:libpng-1.5.13-7.amzn2.0.2.x86_64                        32/243
+1595288604,,ui,message,    amazon-ebs:   Updating   : libxml2-2.9.1-6.amzn2.3.3.x86_64                          33/243
+1595288604,,ui,message,    amazon-ebs:   Updating   : ncurses-6.0-8.20170212.amzn2.1.3.x86_64                   34/243
+1595288604,,ui,message,    amazon-ebs:   Updating   : coreutils-8.22-24.amzn2.x86_64                            35/243
+1595288605,,ui,message,    amazon-ebs:   Updating   : krb5-libs-1.15.1-37.amzn2.2.2.x86_64                      36/243
+1595288605,,ui,message,    amazon-ebs:   Updating   : amazon-linux-extras-1.6.11-1.amzn2.noarch                 37/243
+1595288605,,ui,message,    amazon-ebs:   Updating   : selinux-policy-3.13.1-192.amzn2.6.3.noarch                38/243
+1595288605,,ui,message,    amazon-ebs:   Updating   : libteam-1.27-9.amzn2.x86_64                               39/243
+1595288605,,ui,message,    amazon-ebs:   Updating   : libidn2-2.3.0-1.amzn2.x86_64                              40/243
+1595288605,,ui,message,    amazon-ebs:   Updating   : libcurl-7.61.1-12.amzn2.0.2.x86_64                        41/243
+1595288605,,ui,message,    amazon-ebs:   Updating   : systemd-libs-219-57.amzn2.0.12.x86_64                     42/243
+1595288606,,ui,message,    amazon-ebs:   Updating   : elfutils-libs-0.176-2.amzn2.x86_64                        43/243
+1595288606,,ui,message,    amazon-ebs:   Updating   : systemd-219-57.amzn2.0.12.x86_64                          44/243
+1595288606,,ui,message,    amazon-ebs:   Updating   : elfutils-default-yama-scope-0.176-2.amzn2.noarch          45/243
+1595288606,,ui,message,    amazon-ebs:   Updating   : curl-7.61.1-12.amzn2.0.2.x86_64                           46/243
+1595288606,,ui,message,    amazon-ebs:   Updating   : rpm-libs-4.11.3-40.amzn2.0.4.x86_64                       47/243
+1595288606,,ui,message,    amazon-ebs:   Updating   : rpm-4.11.3-40.amzn2.0.4.x86_64                            48/243
+1595288606,,ui,message,    amazon-ebs:   Updating   : procps-ng-3.3.10-26.amzn2.x86_64                          49/243
+1595288607,,ui,message,    amazon-ebs:   Updating   : initscripts-9.49.47-1.amzn2.0.1.x86_64                    50/243
+1595288607,,ui,message,    amazon-ebs:   Updating   : cronie-anacron-1.4.11-23.amzn2.x86_64                     51/243
+1595288607,,ui,message,    amazon-ebs:   Updating   : cronie-1.4.11-23.amzn2.x86_64                             52/243
+1595288607,,ui,message,    amazon-ebs:   Updating   : systemd-sysv-219-57.amzn2.0.12.x86_64                     53/243
+1595288607,,ui,message,    amazon-ebs:   Installing : 2:microcode_ctl-2.1-47.amzn2.0.7.x86_64                   54/243
+1595288607,,ui,message,    amazon-ebs:   Updating   : openssh-server-7.4p1-21.amzn2.0.1.x86_64                  55/243
+1595288607,,ui,message,    amazon-ebs:   Updating   : gnupg2-2.0.22-5.amzn2.0.4.x86_64                          56/243
+1595288607,,ui,message,    amazon-ebs:   Updating   : rpm-build-libs-4.11.3-40.amzn2.0.4.x86_64                 57/243
+1595288607,,ui,message,    amazon-ebs:   Installing : python2-rpm-4.11.3-40.amzn2.0.4.x86_64                    58/243
+1595288607,,ui,message,    amazon-ebs:   Updating   : lm_sensors-libs-3.4.0-8.20160601gitf9185e5.amzn2.x86_6    59/243
+1595288607,,ui,message,    amazon-ebs:   Updating   : kpartx-0.4.9-127.amzn2.x86_64                             60/243
+1595288608,,ui,message,    amazon-ebs:   Updating   : libsss_idmap-1.16.4-21.amzn2.x86_64                       61/243
+1595288608,,ui,message,    amazon-ebs:   Updating   : 2:tar-1.26-35.amzn2.x86_64                                62/243
+1595288608,,ui,message,    amazon-ebs:   Updating   : dracut-033-535.amzn2.1.3.x86_64                           63/243
+1595288608,,ui,message,    amazon-ebs:   Updating   : libsss_nss_idmap-1.16.4-21.amzn2.x86_64                   64/243
+1595288608,,ui,message,    amazon-ebs:   Installing : iptables-libs-1.8.2-16.amzn2.0.2.x86_64                   65/243
+1595288608,,ui,message,    amazon-ebs:   Installing : json-c-0.11-4.amzn2.0.4.x86_64                            66/243
+1595288608,,ui,message,    amazon-ebs:   Updating   : libseccomp-2.4.1-1.amzn2.x86_64                           67/243
+1595288608,,ui,message,    amazon-ebs:   Updating   : libjpeg-turbo-1.2.90-6.amzn2.0.3.x86_64                   68/243
+1595288608,,ui,message,    amazon-ebs:   Updating   : libfastjson-0.99.4-3.amzn2.x86_64                         69/243
+1595288608,,ui,message,    amazon-ebs:   Updating   : rsyslog-8.24.0-52.amzn2.x86_64                            70/243
+1595288608,,ui,message,    amazon-ebs:   Updating   : kbd-misc-1.15.5-15.amzn2.noarch                           71/243
+1595288609,,ui,message,    amazon-ebs:   Updating   : kbd-1.15.5-15.amzn2.x86_64                                72/243
+1595288609,,ui,message,    amazon-ebs:   Updating   : cloud-init-19.3-3.amzn2.noarch                            73/243
+1595288609,,ui,message,    amazon-ebs:   Updating   : libtiff-4.0.3-32.amzn2.x86_64                             74/243
+1595288609,,ui,message,    amazon-ebs:   Updating   : chrony-3.2-1.amzn2.0.5.x86_64                             75/243
+1595288609,,ui,message,    amazon-ebs:   Updating   : systemtap-runtime-4.2-1.amzn2.0.1.x86_64                  76/243
+1595288609,,ui,message,    amazon-ebs:   Updating   : iptables-1.8.2-16.amzn2.0.2.x86_64                        77/243
+1595288612,,ui,message,    amazon-ebs:   Updating   : sssd-client-1.16.4-21.amzn2.x86_64                        78/243
+1595288612,,ui,message,    amazon-ebs:   Installing : kernel-4.14.181-142.260.amzn2.x86_64                      79/243
+1595288612,,ui,message,    amazon-ebs:   Updating   : dracut-config-generic-033-535.amzn2.1.3.x86_64            80/243
+1595288612,,ui,message,    amazon-ebs:   Updating   : sysstat-10.1.5-18.amzn2.0.1.x86_64                        81/243
+1595288612,,ui,message,    amazon-ebs:   Updating   : yum-3.4.3-158.amzn2.0.4.noarch                            82/243
+1595288612,,ui,message,    amazon-ebs: ec2-instance-connect:x:998:996::/home/ec2-instance-connect:/sbin/nologin
+1595288613,,ui,message,    amazon-ebs:   Updating   : ec2-instance-connect-1.1-12.amzn2.noarch                  83/243
+1595288613,,ui,message,    amazon-ebs:   Updating   : rpm-plugin-systemd-inhibit-4.11.3-40.amzn2.0.4.x86_64     84/243
+1595288613,,ui,message,    amazon-ebs:   Updating   : ec2-net-utils-1.4-2.amzn2.noarch                          85/243
+1595288613,,ui,message,    amazon-ebs:   Updating   : ec2-utils-1.2-1.amzn2.noarch                              86/243
+1595288613,,ui,message,    amazon-ebs:   Updating   : libdrm-2.4.97-2.amzn2.x86_64                              87/243
+1595288616,,ui,message,    amazon-ebs:   Updating   : at-3.1.13-24.amzn2.x86_64                                 88/243
+1595288616,,ui,message,    amazon-ebs:   Updating   : amazon-ssm-agent-2.3.1319.0-1.amzn2.x86_64                89/243
+1595288616,,ui,message,    amazon-ebs:   Updating   : ec2-hibinit-agent-1.0.2-3.amzn2.noarch                    90/243
+1595288618,,ui,message,    amazon-ebs:   Updating   : hwdata-0.252-9.3.amzn2.x86_64                             91/243
+1595288619,,ui,message,    amazon-ebs:   Updating   : strace-4.26-1.amzn2.0.1.x86_64                            92/243
+1595288620,,ui,message,    amazon-ebs:   Updating   : teamd-1.27-9.amzn2.x86_64                                 93/243
+1595288621,,ui,message,    amazon-ebs:   Updating   : selinux-policy-targeted-3.13.1-192.amzn2.6.3.noarch       94/243
+1595288621,,ui,message,    amazon-ebs:   Updating   : amazon-linux-extras-yum-plugin-1.6.11-1.amzn2.noarch      95/243
+1595288621,,ui,message,    amazon-ebs:   Updating   : libtirpc-0.2.4-0.16.amzn2.x86_64                          96/243
+1595288621,,ui,message,    amazon-ebs:   Updating   : openssh-clients-7.4p1-21.amzn2.0.1.x86_64                 97/243
+1595288622,,ui,message,    amazon-ebs:   Updating   : man-db-2.6.3-9.amzn2.0.3.x86_64                           98/243
+1595288622,,ui,message,    amazon-ebs:   Updating   : binutils-2.29.1-30.amzn2.x86_64                           99/243
+1595288622,,ui,message,    amazon-ebs:   Updating   : aws-cfn-bootstrap-1.4-32.amzn2.0.1.noarch                100/243
+1595288622,,ui,message,    amazon-ebs:   Updating   : blktrace-1.0.5-9.amzn2.x86_64                            101/243
+1595288622,,ui,message,    amazon-ebs:   Updating   : libxml2-python-2.9.1-6.amzn2.3.3.x86_64                  102/243
+1595288623,,ui,message,    amazon-ebs:   Updating   : freetype-2.8-14.amzn2.x86_64                             103/243
+1595288623,,ui,message,    amazon-ebs:   Updating   : awscli-1.16.300-1.amzn2.0.2.noarch                       104/243
+1595288623,,ui,message,    amazon-ebs:   Updating   : 2:irqbalance-1.5.0-4.amzn2.0.1.x86_64                    105/243
+1595288623,,ui,message,    amazon-ebs:   Updating   : 14:tcpdump-4.9.2-4.amzn2.1.x86_64                        106/243
+1595288623,,ui,message,    amazon-ebs:   Updating   : file-5.11-36.amzn2.0.1.x86_64                            107/243
+1595288623,,ui,message,    amazon-ebs:   Updating   : passwd-0.79-5.amzn2.x86_64                               108/243
+1595288623,,ui,message,    amazon-ebs:   Updating   : setup-2.8.71-10.amzn2.0.1.noarch                         109/243
+1595288623,,ui,message,    amazon-ebs: warning: /etc/shadow created as /etc/shadow.rpmnew
+1595288623,,ui,message,    amazon-ebs:   Updating   : 1:mariadb-libs-5.5.64-1.amzn2.x86_64                     110/243
+1595288623,,ui,message,    amazon-ebs:   Updating   : gdisk-0.8.10-3.amzn2.x86_64                              111/243
+1595288623,,ui,message,    amazon-ebs:   Updating   : xfsdump-3.1.8-6.amzn2.x86_64                             112/243
