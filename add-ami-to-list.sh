@@ -14,7 +14,7 @@ USAGE: `basename $0` [options]
 EOF
 }
 
-while getopts "a:t:r:h" OPTION
+while getopts "a:h" OPTION
 do
     case $OPTION in
         a) ami_id=$OPTARG ;;
