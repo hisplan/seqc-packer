@@ -24,3 +24,10 @@ sudo ln -s /opt/conda/bin/pip /usr/bin/pip3
 
 # upgrade pip to the latest version
 sudo pip3 install --upgrade pip
+
+# hack: make installable via pip3 later when you get onto an instance
+# fixme: install miniconda to /home/ec2-user/miniconda
+sudo mkdir -p /home/ec2-user/.local/
+sudo chown -R ec2-user /home/ec2-user/.local/
+sudo chgrp -R ec2-user /home/ec2-user/.local/
+sudo chmod -R u+r /home/ec2-user/.local/
