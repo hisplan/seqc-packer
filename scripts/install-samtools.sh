@@ -1,8 +1,9 @@
 #!/bin/bash -e
 
-SAMTOOLS_VERSION="1.3.1"
+# https://github.com/samtools/samtools/releases/tag/1.10
+SAMTOOLS_VERSION="1.10"
 
-sudo yum install -y zlib-devel ncurses-devel
+sudo yum install -y zlib-devel ncurses-devel bzip2-devel xz-devel
 
 cd /tmp
 
@@ -11,6 +12,6 @@ tar xjvf samtools-${SAMTOOLS_VERSION}.tar.bz2
 rm -rf samtools-${SAMTOOLS_VERSION}.tar.bz2
 
 cd samtools-${SAMTOOLS_VERSION}
+./configure --prefix=/usr/local
 make
-
-sudo mv samtools /usr/bin/
+sudo make install
