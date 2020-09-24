@@ -1,7 +1,7 @@
 {
     "variables": {
         "image_version": "a1",
-        "seqc_version": "0.2.6-rc6",
+        "seqc_version": "0.2.6-rc7",
         "maintainer": "chunj@mskcc.org",
         "region": "us-east-1",
         "source_ami": "ami-0de53d8956e8dcf80"
