@@ -1,6 +1,6 @@
 {
     "variables": {
-        "image_version": "a2",
+        "image_version": "a3",
         "seqc_version": "0.2.7",
         "maintainer": "chunj@mskcc.org",
         "region": "us-east-1",
