@@ -43,7 +43,7 @@ Increment `image_version` in the `seqc.packer` file:
 {
     "variables": {
         "image_version": "a1",
-        "seqc_version": "0.2.7",
+        "seqc_version": "0.2.8",
         "maintainer": "chunj@mskcc.org"
     },
     ...

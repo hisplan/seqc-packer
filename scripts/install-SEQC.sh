@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 # github tag version to pull
-SEQC_VERSION="0.2.7"
+SEQC_VERSION="0.2.8"
 SEQC_REPO="dpeerlab"
 # install dependencies
 sudo yum install -y cairo pango
