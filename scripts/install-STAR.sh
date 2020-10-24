@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-STAR_VERSION="2.5.3a"
+STAR_VERSION="2.7.6a"
 
 cd /tmp
 curl -OL https://github.com/alexdobin/STAR/archive/${STAR_VERSION}.tar.gz
