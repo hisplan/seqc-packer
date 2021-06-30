@@ -23,13 +23,13 @@ Python 3.7.3
 
 ## Building SEQC AMI
 
-To create a SEQC AMI in the `us-east-1` region:
+To create a SEQC AMI in the `us-east-1` region (based on `ami-0ab4d1e9cf9a1215a` / `amzn2-ami-hvm-2.0.20210617.0-x86_64-gp2`):
 
 ```bash
 $ ./make-ami.sh -r us-east-1
 ```
 
-To create a SEQC AMI in the `eu-west-1` region:
+To create a SEQC AMI in the `eu-west-1` region (based on `ami-02f24ad9a1d24a799` / `amzn2-ami-hvm-2.0.20210617.0-x86_64-gp2`):
 
 ```bash
 $ ./make-ami.sh -r eu-west-1
@@ -43,7 +43,7 @@ Increment `image_version` in the `seqc.packer` file:
 {
     "variables": {
         "image_version": "a1",
-        "seqc_version": "0.2.8",
+        "seqc_version": "0.2.9",
         "maintainer": "chunj@mskcc.org"
     },
     ...
