@@ -19,8 +19,8 @@ source ~/.bashrc
 # amazon linux comes with python 2.7
 # make `python3` points to conda python
 # make `pip3` points to conda pip
-sudo ln -s /opt/conda/bin/python3.6 /usr/bin/python3
-sudo ln -s /opt/conda/bin/pip /usr/bin/pip3
+sudo ln -snf /opt/conda/bin/python3.6 /usr/bin/python3
+sudo ln -snf /opt/conda/bin/pip /usr/bin/pip3
 
 # upgrade pip to the latest version
 sudo pip3 install --upgrade pip
