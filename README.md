@@ -43,7 +43,7 @@ Increment `image_version` in the `seqc.packer` file:
 {
     "variables": {
         "image_version": "a1",
-        "seqc_version": "0.2.9",
+        "seqc_version": "0.2.10",
         "maintainer": "chunj@mskcc.org"
     },
     ...
@@ -74,6 +74,18 @@ $ ./show-ami-list.sh
     {
         "ID": "ami-0a4d2955fe21dee72",
         "Name": "seqc-v0.2.5_a2"
+    },
+    {
+        "ID": "ami-0c97def6c08694a9a",
+        "Name": "seqc-v0.2.9_a1"
+    },
+    {
+        "ID": "ami-0f7bddb56c574069c",
+        "Name": "seqc-v0.2.7_a3"
+    },
+    {
+        "ID": "ami-0fa8f038a73ccd865",
+        "Name": "seqc-v0.2.10_a1"
     }
 ]
 ```
